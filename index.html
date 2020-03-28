@@ -1,458 +1,176 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-<title>到陣來做夥</title>
-<meta name="description" content="">
-<meta name="keywords" content="">
-<link href="" rel="stylesheet">
-<link href="css/reset.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<link href="css/nav.css" rel="stylesheet">
-<link href="css/zoom.css" rel="stylesheet">
-<link href="css/slogan.css" rel="stylesheet">
-<link href="css/arrowDown.css" rel="stylesheet">
-<link href="css/login.css" rel="stylesheet">
-<link href="css/mygrid.css" rel="stylesheet">
-<link href="css/rwd_nav.css" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<title>我的作品集</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link href="" rel="stylesheet">
+	<link href="css/reset.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/nav.css" rel="stylesheet">
+	<link href="css/zoom.css" rel="stylesheet">
+	<link href="css/slogan.css" rel="stylesheet">
+	<link href="css/arrowDown.css" rel="stylesheet">
+	<link href="css/login.css" rel="stylesheet">
+	<link href="css/mygrid.css" rel="stylesheet">
+	<link href="css/stack.css" rel="stylesheet">
+	<link href="css/rwd_nav.css" rel="stylesheet">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="js/jquery-ui.min.js"></script>	
-<script src="js/zoom.js"></script>
-<script src="js/login.js"></script>
-<script src="js/logo_hover.js"></script>    
-<script>
-    $(document).ready(function(){                                   
-                $('.arrowDown').click(function(){
-                $('.box1 nav').css('backgroundColor','rgba(0,0,0,0.3)');
-                $('.banner').hide();
-                $('.box').css('display','block');
-                });
-                
-            });
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/stack.js"></script>
+	<script src="js/login.js"></script>
+	<script src="js/logo_hover.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('#proposal').click(function () {
+				var user = $('#memName').text();
 
-    $(document).ready(function(){ 
-            $(window).scroll(function(){                
-                var y=$(window).scrollTop();                                    
-                if(y>10){
-                    $('.banner').hide();
-                    $('.box').css('display','block');
-                    $('.box1 nav').css('backgroundColor','rgba(0,0,0,0.3)');
-                    $('.r1').animate({right:'0px'},1000,'easeInSine');                              
-                    $('.r2').animate({left:'0px'},1000,'easeInSine');                     
-                }else if(y==0){
-                    $('.banner').show();           
-                    $('.box').css('display','none');
-                }
-            });
-    });                                  
-// ========================= r1 從右邊滑過來==================
-$(document).ready(function(){ 
-    // $('.logoutPanel').animate({right:'0px'},1000,'easeInSine');
-    // $('.r1').animate({right:'0px'},1000,'easeInSine');
+				if (user === '') {
+					alert("We see you're not logged in. Do you want to Sign up?");
+					$('#topMessage').slideDown(2000);
+				}
 
-});
+			});
+			$('#hideMessage').click(function () {
+				$('#topMessage').slideUp(1000);
+			});
+		});
+	</script>
+	<style type="text/css">
+		.box1 {
+			background: rgba(0, 0, 0, 0.2);
+		}
 
+		.stack {
+			/*height: 80%;*/
+		}
 
-
-// ========================= r2 從左邊滑過來==================
-$(document).ready(function(){ 
-    //$('.r2').();
-});
-// ====================================================
-$(document).ready(function(){ 
-    $('.newP .r1 .c1').hover(function(){
-          $('.r1 .cover').show();          
-    },function(){
-          $('.r1 .cover').hide(); 
-    });
-    $('.newP .r2 .c2').hover(function(){
-          $('.r2 .cover').show();          
-    },function(){
-          $('.r2 .cover').hide(); 
-    });    
-  
-
-
-});
-$(document).ready(function(){
-				//$('#topMessage').slideDown(2000);
-        $('#proposal').click(function(){
-            var user=$('#memName').text();
-              
-            if(user===''){              
-              alert("We see you're not logged in. Do you want to Sign up?");
-              $('#topMessage').slideDown(2000);
-            }
-
-        });
-				$('#hideMessage').click(function(){
-					$('#topMessage').slideUp(1000);
-				});
-			});			
-</script>		
-
-<style type="text/css">
-    
-	body{
-		overflow-x: hidden;
-		font-family: "Microsoft JhengHei", "Arial", sans-serif;
-	}
-    
-    .box{
-        width: 100%;
-        height: 100vh;
-        /*outline: 1px solid red;*/
-        /*background: #ccc;*/
-        display: none;
-        transition: all 1800ms ease-in-out;        
-    }
-    .small{
-        height: 0vh;  
-        transition: all 1800ms ease-in-out;        
-    } 
-    
-    
-    
-    .r2 .c1{
-        text-align:center;
-    }
-
-    .r1Absolute{
-        position:absolute;
-        right:-1000px;
-        top:150px;
-        display:block;  
-    }
-    .r1 .c1, .r1 .c2, .r2 .c2{
-        text-align: center;
-    } 
-    .r1{
-      border:none;
-    }   
-    .r2{
-        position:absolute;
-        left:-1000px;
-        top:606px;
-        display:block;  
-        border:none;
-    }
-    
-      
-    .r3{
-        position:absolute;
-        right:0px;
-        top:1300px;
-        display:block;     
-        width: 100vw;
-        margin: auto;
-        border:none;        
-    }
-    .r4{
-        position:absolute;
-        right:0px;
-        top:1075px;
-        display:block;     
-        width: 100vw;
-        font-size:50px;
-        text-align:center;
-        border:none;
-        color:#444;
-
-        /*border-top:1px solid #BCA598;*/
-    }
-    .r4 h2{      
-      /*width:1570px;*/
-      width: 80%;
-      margin:auto;
-      border-top:1px solid #BCA598;
-      padding-top : 80px;
-    }
-/* ============== banner wheel==================*/
-#imgView{
-  overflow:hidden;
-  height:600px;
-  width:100vw;
-  position:absolute; 
-  padding-bottom:40px;
-
-}    
-#toLeft{
-  position: absolute; 
-  top:260px;
-  left:2%;
-  width: 50px;
-  height: 50px;
-  color:#fff;
-  border-radius: 50px;
-  background: #000;
-  font-size:50px;
-  font-weight:bold;  
-  z-index:5;
-  text-align: left;
-  line-height: 41px;
-  } 
-#toRight{
-  position: absolute;
-  right:2%;
-  top:260px;
-  width:50px;
-  height:50px;
-  color:#fff;
-  border-radius: 50px;
-  background: #000;
-  font-size:50px;
-  font-weight:bold;  
-  z-index:5;
-  text-align: right;
-  line-height: 41px;
-}
-#toLeft:hover, #toRight:hover {
-    background-color: rgba(130,130,130,0.7);
-    border-radius: 50px solid #000;
-}  
-#imgContainer{
-    position: absolute;
-    width:500%;    
-    overflow:hidden;
-}   
-
-.bannerImg {width:100vw;}
-.newP .r1 .c1, .newP .r2 .c2{
-  position:relative;
-  overflow:hidden; 
-}
-/*
-.r1{
-  position:relative;
-}*/
-.cover{    
-  background:rgba(0,0,0,.3);
-  z-index:2;
-  position:absolute;
-  width:839px;
-  height:438px;
-  top:0;
-  left:0px;
-  display:none;
-  color:#fff;
-  font-size:48px;
-  line-height:419px;
-  font-weight:bold;
-}
-
-
-.r1 .c1 img, .r2 .c2 img{
-  transition:.5s cubic-bezier(.18,.06,.62,1.66);
-  transform: scale(1, 1);
-}
-.r1 .c1:hover img{
-  transform: scale(1.4, 1.4);   
-}
-.r2 .c2:hover img{
-  transform: scale(1.4, 1.4);   
-}
-
-.r1 .c2, .r2 .c1{
-  padding:0 2em;
-  line-height:1.8em;
-  text-align:left;
-}
-.r2 .c1{
-  margin-top:100px;
-}
-.r1 .c1, .r2 .c2{
-  cursor: pointer;
-}
-.cover a{
-	
-	text-decoration: none;
-	color:#fff;
-}
-
-#topMessage{
-  z-index:1000;
-  position:absolute;
-  right:0px;
-  left:0px;
-  margin:auto;
-}
-@media screen and (max-width:767px){
-        .r2{
-          top:1200px;
-        }
-        .r4{
-          top:2385px;
-        }
-        .r3{
-          top:2716px;
-        }
-    }
-</style>
+		#topMessage {
+			z-index: 1000;
+			position: absolute;
+			right: 0px;
+			left: 0px;
+			margin: auto;
+		}
+	</style>
 </head>
+
 <body>
-<div id="topMessage">
-			We see you're not logged in. Do you want to <a href="#">sign up</a>? <br> 
-			<a href="#" id="hideMessage">No, thanks.</a>
+	<div id="topMessage">
+		We see you're not logged in. Do you want to <a href="#">sign up</a>? <br>
+		<a href="#" id="hideMessage">No, thanks.</a>
+	</div>
+	<!-- ====================== RWD 導覽列  ==================-->
+	<input type="checkbox" name="" id="control-box">
+	<!-- =====================================================-->
+	<!-- =========== 架導覽列和logo ========================== -->
+	<div class="box1 header">
+		<div class="logo">
+			<a href="index.html">
+				<img src="images/logo_v3.png">
+			</a>
 		</div>
-<div class='banner'>
-	<h2 id="slogan">文創，設計，提案平台</h2>
-	<div class="arrowDown"></div>
+		<label class="hb" for="control-box"></label>
 
-    <div class="bg">
-    	<img id="img1" class="bgImg opacity" src="images/pic_2.png" alt="" >
-    	<img id="img2" class="bgImg opacity" src="images/pic_1.png" alt="">
-    	<img id="img3" class="bgImg opacity" src="images/office-1.png" alt="">
-    	<img id="img4" class="bgImg opacity" src="images/pic_4.png" alt="">
-   </div>
-</div>   
+		<nav>
+			<ul id="main_menu">
+				<li><a href="stack.html">我的作品</a></li>
+				<!-- <li><a href="form.html" id="proposal">立即提案</a></li> -->
 
-<!-- ====================== RWD 導覽列  ==================-->
-<input type="checkbox" name="" id="control-box">
-<!-- =====================================================-->
-
-<!-- =========== 架導覽列和logo ========================== -->
-   <div class="box1 header">
-    	<div class="logo">
-    	  <a href="">
-    	    <img src="images/logo_v3.png">
-    	  </a> 
-    	 </div>
-<!-- ====================== RWD 導覽列  ==================-->
-       <label class="hb" for="control-box"></label>
-<!-- =====================================================-->
-    	<nav>
-    		<ul id="main_menu">
-    			<li><a href="stack.html">探索專案</a></li>
-    			<li><a href="form.html" id="proposal">立即提案</a></li>
-    			<!-- <li><a href="">到陣夥伴的故事</a></li> -->
-    					
-    		</ul>
-    		<ul id="sub_menu">
-    			<!--<li><a id="search" href="" title="搜尋"></a></li>-->
-    			<!--<li><a id="favorite" href="" title="我的最愛"></a></li>-->          
-    			<li><a class="account login" href="#" title="我的帳號">我的帳號</a></li>
-    			<li><a id="service" href="form.html" title="客戶服務">客戶服務</a></li>
-    			<!--<li><a id="phone" href="" title="客戶服務中心"></a></li>-->
-    		</ul>
-    	</nav>
-
-    </div>
-
-
-<!-- ================ 敲擊arrow Down 下一個畫面================ -->
-    <div class="box newP">
-    <div class="row r1 r1Absolute">
-        <div class="column-2 c1">
-            <!--<img src="https://api.fnkr.net/testimg/350x200/00CED1/FFF/?text=img+placeholder"> -->
-            <img src="images/pic_1.jpg">          
-            <div class='cover'><a href="stack.html">更多內容</a></div>
-        </div>
-        <div class="column-2 c2">          
-            <h2>故事</h2>
-            <p>閱讀「故事」，就是一趟旅行。《故事》官網，旅行的起點：http://gushi.tw
-
-9/28 重要更新：由於漢珍公司提供的「台灣老照片與資料庫使用權限」限量 700 份，第 701 位（含）之後，也就是 9/28  2：00 AM 之後贊助的故事人，回饋項目將不含「台灣老照片資料庫權限」，但是其他回饋品項的部分依然維持不變唷！
-
-
-「為什麼要取名叫故事？」我們常常遇到讀者這麼問。
-
-原因無他，生活中大大小小、世界的一切背後，都有個故事在等待去挖掘、被發現，而歷史學人的工作，就是去找尋走入故事的關鍵鑰匙。
-
-走入一個故事，就像走入另個世界，甚至是一趟穿越時空的旅行。世界這麼大，每個故事總會遇到它的知音，只要能把艱深的歷史知識，變成更通俗易懂的故事，就能與更多人分享閱讀。
-於是，《故事》就這麼開始了。</p>
-        </div>
-    </div>
-    <div class="row r2">
-        <div class="column-2 c1">                                  
-            <h2>我在風裡呼喚你-風體 Wind Font 字型計畫</h2>
-            <p>風體®是一套由設計師獨立設計的創意繁體中文字型，起因於要做一個與「空氣」聯想的作品，就這麼在不經意的時候形成了。
-
-適用於標題類字型的風體，字身瘦長顯得優雅氣質，並以自然間的事物作為基礎：風、飄落的樹葉、茶葉、搖曳的芒草，繪出具有這些特色的筆畫後，逐漸形成一個又一個的繁體中文字符。風體，一套創意的繁體中文字型：悄悄地乘著風，為字型拂來新的氣象。初期以手繪將字的骨架及筆畫風格決定好後，進入造字軟體拉出風格一致的部件和基本字，經過反覆修正後，慢慢延伸形成一個個的字符，最後就可輸出成我們鍵盤敲得出來的數位字型。</p>
-        </div>
-        <div class="column-2 c2">                                  
-            <img src="images/asset_21325_image_big.jpg">
-            <div class='cover'><a href="stack.html">更多內容</a></div>
-        </div>
-    </div>
-    <div class="row r4">
-        <h2>熱門專案</h2>
-    </div>
-    <div class="row r3" id="imgView">
-        <span id="toLeft"><</span>
-        <span id="toRight">></span>
-        <div id="imgContainer">
-            <img class="bannerImg" src="images/img_01.png" >
-            <img class="bannerImg" src="images/img_02.png" >
-            <img class="bannerImg" src="images/img_03.png" >
-            <img class="bannerImg" src="images/img_004.png">
-        </div>    
-    </div>
-
-   </div>
-<!--================== 登入畫面==============================  -->
-<div class="lightbox">
-	<div class="content">	
-	    <a id="btnLoginCancel" href="">X</a>
-	  		<div class="panel panelLogin">
-			    <div id="register" class='item'>
-			        <h2>登入</h2>
-			        <p>如果您已是用戶，請在此登入。</p>
-			        <label>電郵地址*</label><br>
-			        <input type="email" name="" id="memId"><br>
-			        <label>密碼*</label><br>
-			        <input type="password" name="" id="memPsw"><br>
-			        <a class="lostPsw" href="">忘記密碼?</a><br>
-			        <input type="button" name="" value="登入" id="btnLogin">
-			    </div>
-			    <div id="newAccount" class='item'>
-			        <h2>新用戶</h2>
-			        <p class='textNewUser'>如欲透過電子郵件收取您的密碼，<br>請在此輸入您的電郵地址。</p>
-			        <input id="btnBuildAccount" type="button" name="" value="建立帳號">
-			    </div>        
-			</div>  	    
-	</div>    
-</div>
-<!--================== 登出畫面==============================  -->
-<div class='panel logoutPanel'>   
-		<div class='item welcom'>
-			        <h2>歡迎<span id='memName'></span></h2>			        
-			        <input type="button" name="" value="登出" id="btnLogout">
-		</div>
-		<div class='item userData'>	
-			<ul>		        
-			    <li><a href="#">我的個人檔案</a></li>
-			    <li><a href="#">我發佈的專案</a></li>
-			    <li><a href="#">我參加的專案</a></li>
 			</ul>
-		</div>        
+			<!-- <ul id="sub_menu">
+				<li><a class="account login" href="#" title="我的帳號">我的帳號</a></li>
+				<li><a id="service" href="form.html" title="客戶服務">客戶服務</a></li>
+			</ul> -->
+		</nav>
+	</div>
+	<!--======================================================================  -->
+	<!--================== 登入畫面==============================  -->
+	<div class="lightbox">
+		<div class="content">
+			<a id="btnLoginCancel" href="">X</a>
+			<div class="panel panelLogin">
+				<div id="register" class='item'>
+					<h2>登入</h2>
+					<p>如果您已是用戶，請在此登入。</p>
+					<label>電郵地址*</label><br>
+					<input type="email" name="" id="memId"><br>
+					<label>密碼*</label><br>
+					<input type="password" name="" id="memPsw"><br>
+					<a class="lostPsw" href="">忘記密碼?</a><br>
+					<input type="button" name="" value="登入" id="btnLogin">
+				</div>
+				<div id="newAccount" class='item'>
+					<h2>新用戶</h2>
+					<p class='textNewUser'>如欲透過電子郵件收取您的密碼，<br>請在此輸入您的電郵地址。</p>
+					<input id="btnBuildAccount" type="button" name="" value="建立帳號">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--================== 登出畫面==============================  -->
+	<div class='panel logoutPanel'>
+		<div class='item welcom'>
+			<h2>歡迎<span id='memName'></span></h2>
+			<input type="button" name="" value="登出" id="btnLogout">
+		</div>
+		<div class='item userData'>
+			<ul>
+				<li><a href="#">我的個人檔案</a></li>
+				<li><a href="#">我發佈的專案</a></li>
+				<li><a href="#">我參加的專案</a></li>
+			</ul>
+		</div>
 
 
-</div>
-<script type="text/javascript">
-function $id(id){
-  return document.getElementById(id);
-};
+	</div>
+	<div class="stack">
+		<div class="page">
+			<!-- <div class="card card7" name="img7"><img src="images/pro7.jpg"></div> -->
+			<div class="card card6" name="img6"><img src="images/pro6.jpg"></div>
+			<div class="card card5" name="img5"><img src="images/pro5.jpg"></div>
+			<div class="card card4" name="img4"><img src="images/pro4.jpg"></div>
+			<div class="card card3" name="img3"><img src="images/pro3.jpg"></div>
+			<div class="card card2" name="img2"><img src="images/pro2.jpg"></div>
+			<div class="card card1" name="img1"><img src="images/pro1.jpg"></div>
+		</div>
+		<div class="rightSide">
+			<div class="text text1">
+				<h2>香港emphasis珠寶電商網站</h2>
+				<p>https://www.emphasis.com</p>
+			</div>
+			<div class="text text2">
+				<h2>台灣點睛品珠寶電商網站</h2>
+				<p>https://tw.chowsangsang.com/</p>
+			</div>
+			<div class="text text3">
+				<h2>React UI Library</h2>
+				<p>https://hsiaofung.github.io/dawn-react-ui-lib/</p>
+			</div>
+			<div class="text text4">
+				<h2>Lafleur 花藝設計網站</h2>
+				<p>https://hsiaofung.github.io/lafleur</p>
+			</div>
+			<div class="text text5">
+				<h2>Vivi 婚紗網站</h2>
+				<p>https://hsiaofung.github.io/vivi</p>
+			</div>
+			<div class="text text6">
+				<h2>matches禮品網站</h2>
+				<p>https://hsiaofung.github.io/matches</p>
+			</div>
+			<!-- <div class="text text7">
+				<h2>7</h2>
+				<p>7</p>
+			</div> -->
+		</div>
 
-//==========window.onload
-window.onload=function(){
-    //==========toLeft.onClick
-    $id("toLeft").onclick = function (){
-      var imgContainer = $id("imgContainer");
-      imgContainer.insertBefore(imgContainer.lastChild, imgContainer.firstChild);
-    };
-    //==========toRight.onclick 
-    $id("toRight").onclick = function (){
-      var imgContainer = $id("imgContainer");
-      imgContainer.appendChild(imgContainer.firstChild);  
-    }  
-    ; 
-
-};
-
-
-</script>
+	</div>
 </body>
+
 </html>
