@@ -1,0 +1,86 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2017-05-21 19:42:44
+ * @version $Id$
+ */
+body{
+	overflow: hidden;
+}
+.stack{
+		background: #000;
+		width: 100vw;
+		height: 100vh;
+	}
+	.card{
+		width: 500px;
+		height: 708px;		
+		position: absolute;
+		top:15px;
+	    left: 0;
+		right: 0;
+		margin: auto;
+		transition: all 800ms 
+		cubic-bezier(.18,.06,.62,1.66);		
+		overflow: hidden;
+		border:3px solid white;
+		cursor: pointer;
+	}	
+	.card1{
+		transform: scale(1);
+		opacity: 1;
+	}
+	
+	.card2{
+		margin-top:-40px;
+		transform: scale(0.916667);
+		opacity: 0.833333;
+	}
+	.card3{
+		margin-top:-80px;
+		transform: scale(0.833333);		
+		opacity: 0.666667;
+	}
+	.card4{
+		margin-top:-120px;
+		transform: scale(0.75);		
+		opacity: 0.5;		
+	}
+	.card5{
+		margin-top:-160px;
+		transform: scale(0.6666667);		
+		opacity: 0.3333;
+	}
+	.card6{
+		margin-top:-200px;
+		transform: scale(0.5833333);		
+		opacity: 0.167;
+	}	
+	.stack .card img{
+		width: 100%;
+	}
+	.text{
+		color: white;
+		font-size: 25px;
+		display: none;
+	}
+	.text1{
+		display: block;
+	}
+	.rightSide,.page{
+		display: inline-block;
+		vertical-align: middle;		
+	}
+
+	
+	.rightSide{
+		width: 40%;		
+		text-align: center;
+		line-height:4em;
+	}
+	.page{
+		width: 50%;
+		height: 100%;
+		position: relative;	
+	}	

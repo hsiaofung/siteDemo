@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<link href="css/reset.css" rel="stylesheet">
+<link href="css/nav.css" rel="stylesheet">
+<link href="css/zoom.css" rel="stylesheet">
+<link href="css/slogan.css" rel="stylesheet">
+<link href="css/arrowDown.css" rel="stylesheet">
+<link href="css/login.css" rel="stylesheet">
+<link href="css/mygrid.css" rel="stylesheet">
+<link href="css/rwd_nav.css" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>	
+<script src="js/zoom.js"></script>
+<script src="js/login.js"></script>
+<script src="js/logo_hover.js"></script>    
+<script>
+    $(document).ready(function(){                                   
+                $('.arrowDown').click(function(){
+                $('.box1 nav').css('backgroundColor','rgba(0,0,0,0.3)');
+                $('.banner').hide();
+                $('.box').css('display','block');
+                });
+                
+            });
+
+    $(document).ready(function(){ 
+            $(window).scroll(function(){                
+                var y=$(window).scrollTop();                                    
+                if(y>10){
+                    $('.banner').hide();
+                    $('.box').css('display','block');
+                    $('.box1 nav').css('backgroundColor','rgba(0,0,0,0.3)');
+                    $('.r1').animate({right:'0px'},1000,'easeInSine');                              
+                    $('.r2').animate({left:'0px'},1000,'easeInSine');                     
+                }else if(y==0){
+                    $('.banner').show();           
+                    $('.box').css('display','none');
+                }
+            });
+    });                                  
+// ========================= r1 從右邊滑過來==================
+$(document).ready(function(){ 
+    // $('.logoutPanel').animate({right:'0px'},1000,'easeInSine');
+    // $('.r1').animate({right:'0px'},1000,'easeInSine');
+
+});
+
+
+
+// ========================= r2 從左邊滑過來==================
+$(document).ready(function(){ 
+    //$('.r2').();
+});
+// ====================================================
+$(document).ready(function(){ 
+    // var kk=$('.login').css('backgroundImage');
+
+});
+
+</script>		
+
+<style type="text/css">
+    
+	body{
+		overflow-x: hidden;
+		font-family: "Microsoft JhengHei", "Arial", sans-serif;
+	}
+    
+    .box{
+        width: 100%;
+        height: 100vh;
+        /*outline: 1px solid red;*/
+        /*background: #ccc;*/
+        display: none;
+        transition: all 1800ms ease-in-out;        
+    }
+    .small{
+        height: 0vh;  
+        transition: all 1800ms ease-in-out;        
+    } 
+    
+    
+    
+    .r2 .c1{
+        text-align:center;
+    }
+
+    .r1Absolute{
+        position:absolute;
+        right:-1000px;
+        top:150px;
+        display:block;  
+    }
+    .r1 .c1, .r1 .c2, .r2 .c2{
+        text-align: center;
+    }    
+    .r2{
+        position:absolute;
+        left:-1000px;
+        top:500px;
+        display:block;  
+    }
+    .r3{
+        position:absolute;
+        right:0px;
+        top:850px;
+        display:block;     
+        width: 100%vw;
+        margin: auto;
+    }
+
+/* ============== banner wheel==================*/
+#imgView{
+  overflow:hidden;
+  height:470px;
+  width:100vw;
+  position:absolute; 
+  margin:auto;  
+}    
+#toLeft{
+  position: absolute;
+  left:5%;
+  top:40%;
+  width: 50px;
+  height: 50px;
+  color:#fff;
+  border-radius: 50px;
+  background: #000;
+  font-size:50px;
+  font-weight:bold;
+  line-height:50px; 
+  z-index:5;
+  text-align: center;
+  line-height: 50px;
+  } 
+#toRight{
+  position: absolute;
+  left:95%;
+  top:40%;
+  width:50px;
+  height:50px;
+  color:#fff;
+  border-radius: 50px;
+  background: #000;
+  font-size:50px;
+  font-weight:bold;
+  line-height:50px;    
+  z-index:5;
+  text-align: center;
+  line-height: 50px;
+}
+#toLeft:hover, #toRight:hover {
+    background-color: rgba(130,130,130,0.7);
+    border-radius: 50px solid #000;
+}  
+#imgContainer{
+    position: absolute;
+    width:500%;    
+    overflow:hidden;
+}   
+.bannerImg {width:100vw;}
+
+
+</style>
+</head>
+<body>
+<div class='banner'>
+	<h2 id="slogan">文創，設計<br>提案平台</h2>
+	<div class="arrowDown"></div>
+
+    <div class="bg">
+    	<img id="img1" class="bgImg opacity" src="images/banner.png" alt="" >
+    	<img id="img2" class="bgImg opacity" src="images/58bec14fed988.png" alt="">
+    	<img id="img3" class="bgImg opacity" src="images/office-1.jpg" alt="">
+    	<img id="img4" class="bgImg opacity" src="images/banner_for_explore_project.jpg" alt="">
+   </div>
+</div>   
+
+<!-- ====================== RWD 導覽列  ==================-->
+<input type="checkbox" name="" id="control-box">
+<!-- =====================================================-->
+
+<!-- =========== 架導覽列和logo ========================== -->
+   <div class="box1 header">
+    	<div class="logo">
+    	  <a href="">
+    	    <img src="images/logo_v3.png">
+    	  </a> 
+    	 </div>
+<!-- ====================== RWD 導覽列  ==================-->
+       <label class="hb" for="control-box"></label>
+<!-- =====================================================-->
+    	<nav>
+    		<ul id="main_menu">
+    			<li><a href="stack_v5.html">探索專案</a></li>
+    			<li><a href="10calendar_v1.html">立即提案</a></li>
+    			<!-- <li><a href="">到陣夥伴的故事</a></li> -->
+    					
+    		</ul>
+    		<ul id="sub_menu">
+    			<!--<li><a id="search" href="" title="搜尋"></a></li>-->
+    			<!--<li><a id="favorite" href="" title="我的最愛"></a></li>-->          
+    			<li><a class="account login" href="#" title="我的帳號">我的帳號</a></li>
+    			<li><a id="service" href="form.html" title="客戶服務">客戶服務</a></li>
+    			<!--<li><a id="phone" href="" title="客戶服務中心"></a></li>-->
+    		</ul>
+    	</nav>
+
+    </div>
+
+
+<!-- ================ 敲擊arrow Down 下一個畫面================ -->
+    <div class="box">
+    <div class="row r1 r1Absolute">
+        <div class="column-2 c1">
+            <!--<img src="https://api.fnkr.net/testimg/350x200/00CED1/FFF/?text=img+placeholder"> -->
+            <img src="images/機械手臂.jpg">          
+        </div>
+        <div class="column-2 c2">          
+            <h2>機械手臂</h2>
+            <p>透過桌上型機械手臂， 學習程式設計、機構設計、 軟硬體整合和工業4.0概念驗證。</p>
+        </div>
+    </div>
+    <div class="row r2">
+        <div class="column-2 c1">                                  
+            <h2>白沙灣淨灘</h2>
+            <p>白沙灣是一片美麗的海灘 喚醒大眾保護美麗沙灘的決心 清除沙灘上的垃圾留下美麗的沙灘</p>
+        </div>
+        <div class="column-2 c2">                                  
+            <img src="images/白沙灣淨灘.jpg">
+        </div>
+    </div>
+    <div class="row r3" id="imgView">
+        <span id="toLeft"><</span>
+        <span id="toRight">></span>
+        <div id="imgContainer">
+            <img class="bannerImg" src="images/img_01.png" title="11111111">
+            <img class="bannerImg" src="images/img_02.png" title="2222222222">
+            <img class="bannerImg" src="images/img_03.png"  title="33333333">
+            <img class="bannerImg" src="images/img_004.png" title="4444444444">
+        </div>    
+    </div>
+   </div>
+<!--================== 登入畫面==============================  -->
+<div class="lightbox">
+	<div class="content">	
+	    <a id="btnLoginCancel" href="">X</a>
+	  		<div class="panel panelLogin">
+			    <div id="register" class='item'>
+			        <h2>登入</h2>
+			        <p>如果您已是用戶，請在此登入。</p>
+			        <label>電郵地址*</label><br>
+			        <input type="email" name="" id="memId"><br>
+			        <label>密碼*</label><br>
+			        <input type="password" name="" id="memPsw"><br>
+			        <a class="lostPsw" href="">忘記密碼?</a><br>
+			        <input type="button" name="" value="登入" id="btnLogin">
+			    </div>
+			    <div id="newAccount" class='item'>
+			        <h2>新用戶</h2>
+			        <p class='textNewUser'>如欲透過電子郵件收取您的密碼，<br>請在此輸入您的電郵地址。</p>
+			        <input id="btnBuildAccount" type="button" name="" value="建立帳號">
+			    </div>        
+			</div>  	    
+	</div>    
+</div>
+<!--================== 登出畫面==============================  -->
+<div class='panel logoutPanel'>   
+		<div class='item welcom'>
+			        <h2>歡迎<span id='memName'></span></h2>			        
+			        <input type="button" name="" value="登出" id="btnLogout">
+		</div>
+		<div class='item userData'>	
+			<ul>		        
+			    <li><a href="#">我的個人檔案</a></li>
+			    <li><a href="#">我發佈的專案</a></li>
+			    <li><a href="#">我參加的專案</a></li>
+			</ul>
+		</div>        
+
+
+</div>
+<script type="text/javascript">
+function $id(id){
+  return document.getElementById(id);
+};
+
+//==========window.onload
+window.onload=function(){
+    //==========toLeft.onClick
+    $id("toLeft").onclick = function (){
+      var imgContainer = $id("imgContainer");
+      imgContainer.insertBefore(imgContainer.lastChild, imgContainer.firstChild);
+    };
+    //==========toRight.onclick 
+    $id("toRight").onclick = function (){
+      var imgContainer = $id("imgContainer");
+      imgContainer.appendChild(imgContainer.firstChild);  
+    }  
+    ; 
+
+};
+
+
+</script>
+</body>
+</html>

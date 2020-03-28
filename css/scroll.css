@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2017-05-22 10:08:37
+ * @version $Id$
+ */
+.view1{
+		width: 100vw;
+		height: 100vh;
+		/*background-image: url(../images/1.jpg);*/
+        transition: all 1800ms ease-in-out;        
+	}
+	.small{
+		height: 0vh;        
+	}
+	.view2{
+		width: 100vw;
+		height: 100vh;
+		font-size: 20px;
+	}

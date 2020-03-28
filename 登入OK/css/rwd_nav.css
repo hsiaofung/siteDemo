@@ -1,0 +1,119 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2017-05-24 16:38:06
+ * @version $Id$
+ */
+/*================ RWD==================================*/
+#control-box{
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      opacity:0;
+    }
+    .header{
+      text-align: center;
+    }
+    
+    @media screen and (max-width:767px){
+      .header{
+        text-align: left;
+      }
+      .hb{
+        width: 40px;
+        height: 40px;
+        /*border:1px solid #fff;*/
+        font-size: 1px;
+        color:#fff;
+        position: absolute;
+        top: 4px;
+        /*right: 10px;*/
+        left: 0;
+      }
+      .hb:before{
+        content:'';
+        display:block;
+        width: 32px;
+        height: 4px;
+        background-color:#fff;
+        top: 0;
+        bottom: 0;
+        left: 4px;
+        position: absolute;
+        margin: auto;
+        box-shadow: 0px -8px 0px #fff,
+              0px 8px 0px #fff;
+        z-index: 557;
+      }
+      .hb:after{
+        content: '';
+        display: block;
+        width: 100vw;
+        background: rgba(127,127,127,1);
+        /*outline: 1px solid red;*/
+        height: 70px;
+        position: absolute;
+        top: -5px;
+        z-index: 556;
+      }
+      nav{
+        width: 100vw;
+        /*height: 100vh;*/
+        height: calc( 100vh - 70px );
+        /*background-color:#000;*/
+        /*background-color:rgba(0,0,0,1);*/
+        background: #E0DBD5;
+        position: fixed;
+        top: -100%;
+        bottom: 0;
+        transition:.5s;
+        z-index: 555;
+      }
+      nav a{
+        display:block;
+        color:#000;
+        border-bottom: 1px solid #BCA598;
+        text-decoration: none;
+        padding: 10px 20px;
+        text-align: left;
+        font-size: 16px;
+        
+      }
+      #control-box:checked ~ .header nav{
+        top: 70px;
+      }
+      /*#sub_menu a{
+        outline: 1px solid red;
+      }*/
+      #sub_menu li{
+        /*outline: 1px solid red;*/
+        width: 100vw;
+      }
+      .logo{
+        /*outline: 1px solid red;*/
+        position: absolute;
+        top:-40px;
+        left: 40px;    
+        z-index: 557     
+      }
+
+    }
+
+
+   @media screen and (min-width:768px){
+      .hb{ display:none; }
+   /*   nav{
+        background-color: #000;
+      }
+      nav a{
+        display:inline-block;
+        padding: 10px 20px;
+        color:#fff;
+        text-decoration: none;
+      }
+      nav a:hover{
+        background-color:#fa0;
+      }*/
+    }
+/*=====================================================*/

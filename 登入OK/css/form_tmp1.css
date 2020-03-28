@@ -1,0 +1,94 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2017-05-23 01:37:44
+ * @version $Id$
+ */
+ .emailUsForm{
+		width: 100%;
+		max-width: 960px;
+		background: #EBE8E3;
+		font-family: "Microsoft JhengHei", "Arial", sans-serif;
+		margin: auto;
+		padding: 60px;
+		line-height: 3em;
+	}
+	.emailUsForm td{
+		width: 240px;
+		line-height: 2em;
+		padding: 10px 7em 10px 0;		
+	}
+	.emailUsForm input{
+		height:  40px;
+		width: 100%;
+		font-size: 20px;
+		font-family: "Microsoft JhengHei", "Arial", sans-serif;		
+	}
+	.emailUsForm input[type='submit']{
+		border:1px solid #C8A985;
+		background: #C8A985;
+		color: white;
+		width: 200px;
+		margin-left: 117px;
+	}
+	.emailUsForm h2{		
+		float: left;
+	}
+	.emailUsForm p{
+		font-size: 16px;
+	}
+	.emailUsForm .mustField{
+		font-size: 18px;
+		color:#C8A985;
+		float: right;
+	}
+	.clearfix{
+		clear:both;
+	}
+	.emailUsForm .header{
+		border-bottom: 1px solid #C8A985;
+	}		
+	.emailUsForm td:nth-child(2n+1){
+		text-align: left;
+		padding-right: 0em;
+		width: 12%; 
+	}
+	.emailUsForm td:last-child{
+		width: 41%;
+		padding-right:0px;
+		padding-left: 1em;
+	}
+	.emailUsForm select{
+		height: 40px;
+		width: 100%;
+	}
+	.emailUsForm textarea{
+		display: block;
+		width: 100%;
+		height: 200px;
+		text-align: left;
+		margin-top: 10px;
+		
+	}
+	.limit{
+		text-align:right;
+	}
+	.boxMemo{
+		width:50%;
+		margin-left: 117px;
+		margin-bottom: 5em;
+	}
+	.return{
+		display: block;
+		margin: 20px 0;
+		text-decoration:none;
+		font-size:20px;
+		color:black;
+		margin-left:-20px;
+	}
+	input[type='submit']:hover{
+		color:#444;
+		transition:all 300ms ease-in-out;
+		cursor:pointer;
+	}

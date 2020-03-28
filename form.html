@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<title>到陣來做夥</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+
+
+<link href="css/reset.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/nav.css" rel="stylesheet">
+<link href="css/zoom.css" rel="stylesheet">
+<link href="css/slogan.css" rel="stylesheet">
+<link href="css/arrowDown.css" rel="stylesheet">
+<link href="css/login.css" rel="stylesheet">
+<link href="css/mygrid.css" rel="stylesheet">
+<link href="css/form.css" rel="stylesheet">
+<link href="css/rwd_nav.css" rel="stylesheet">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script> 
+<script src="js/zoom.js"></script>
+<script src="js/login.js"></script>
+<script src="js/logo_hover.js"></script>    
+<script src="js/form.js"></script>  
+
+<script>
+$(document).ready(function(){
+				//$('#topMessage').slideDown(2000);
+        $('#proposal').click(function(){
+            var user=$('#memName').text();
+              
+            if(user===''){              
+              alert("We see you're not logged in. Do you want to Sign up?");
+              $('#topMessage').slideDown(2000);
+            }
+
+        });
+				$('#hideMessage').click(function(){
+					$('#topMessage').slideUp(1000);
+				});
+			});			
+</script>		
+<style type="text/css">
+    .box1{  
+        background: rgba(0,0,0,0.2);
+    }
+    body{
+        overflow-x: hidden;
+        font-family: "Microsoft JhengHei", "Arial", sans-serif;
+    }
+@media screen and (max-width:767px){    
+    body{
+        overflow-x: hidden;
+    }
+  
+}
+#topMessage{
+  z-index:1000;
+  position:absolute;
+  right:0px;
+  left:0px;
+  margin:auto;
+}
+</style>
+</head>
+<body>
+<div id="topMessage">
+			We see you're not logged in. Do you want to <a href="#">sign up</a>? <br> 
+			<a href="#" id="hideMessage">No, thanks.</a>
+		</div>
+<!-- ====================== RWD 導覽列  ==================-->
+<input type="checkbox" name="" id="control-box">
+<!-- =====================================================-->
+<!-- =========== 架導覽列和logo ========================== -->
+   <div class="box1 header">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/logo_v3.png">
+          </a> 
+         </div>
+<!-- ====================== RWD 導覽列  ==================-->
+       <label class="hb" for="control-box"></label>
+<!-- =====================================================-->
+        <nav>
+
+            <ul id="main_menu">
+                <li><a href="stack.html">探索專案</a></li>
+                <li><a href="form.html" id="proposal">立即提案</a></li>
+                <!-- <li><a href="">到陣夥伴的故事</a></li> -->
+                        
+            </ul>
+            <ul id="sub_menu">
+                <!--<li><a id="search" href="" title="搜尋"></a></li>-->
+                <!--<li><a id="favorite" href="" title="我的最愛"></a></li>-->
+                <li><a class="account login" href="#" title="我的帳號">我的帳號</a></li>
+                <li><a id="service" href="form.html" title="客戶服務">客戶服務</a></li>
+                <!--<li><a id="phone" href="" title="客戶服務中心"></a></li>-->
+            </ul>
+        </nav>
+
+    </div>
+<!--================== 登入畫面==============================  -->
+<div class="lightbox">
+    <div class="content">   
+        <a id="btnLoginCancel" href="">X</a>
+            <div class="panel panelLogin">
+                <div id="register" class='item'>
+                    <h2>登入</h2>
+                    <p>如果您已是用戶，請在此登入。</p>
+                    <label>電郵地址*</label><br>
+                    <input type="email" name="" id="memId"><br>
+                    <label>密碼*</label><br>
+                    <input type="password" name="" id="memPsw"><br>
+                    <a class="lostPsw" href="">忘記密碼?</a><br>
+                    <input type="button" name="" value="登入" id="btnLogin">
+                </div>
+                <div id="newAccount" class='item'>
+                    <h2>新用戶</h2>
+                    <p class='textNewUser'>如欲透過電子郵件收取您的密碼，<br>請在此輸入您的電郵地址。</p>
+                    <input id="btnBuildAccount" type="button" name="" value="建立帳號">
+                </div>        
+            </div>          
+    </div>    
+</div>
+<!--================== 登出畫面==============================  -->
+<div class='panel logoutPanel'>   
+        <div class='item welcom'>
+                    <h2>歡迎<span id='memName'></span></h2>                   
+                    <input type="button" name="" value="登出" id="btnLogout">
+        </div>
+        <div class='item userData'> 
+            <ul>                
+                <li><a href="#">我的個人檔案</a></li>
+                <li><a href="#">我發佈的專案</a></li>
+                <li><a href="#">我參加的專案</a></li>
+            </ul>
+        </div>        
+
+
+</div>
+
+
+<div class="emailUsForm">
+	<a class="return" href="index_v2.2.html"><span><&nbsp返回</span></a>
+	<div class="header">
+		<h2 class='column-2 c1'>以電郵聯絡我們</h2>
+		<p class="mustField column-2 c2">必需填寫項目*</p>		
+		<div class="clearfix"></div>
+	</div>
+	<p>您可以隨時透過電子郵件聯絡我們，請提供以下資料，我們的客服代表會盡快回覆，您亦可到常見問題查找答案。</p>
+	<form method="post" action="">
+
+
+    
+<!--============  table 改成div======================  -->
+    <div class="box">
+        <div class="row r1">
+            <div class="column-4 c1">稱謂*</div>
+            <div class="column-4 c2">
+                <select name="sex">
+                <option value="man">先生</option>
+                <option value="female">小姐</option>
+              </select>
+            </div>
+            <div class="column-4 c3">登記電郵*</div>
+            <div class="column-4 c4"><input type="email" name=""></div>
+        </div>
+        <div class="row r2">
+            <div class="column-4 c1">姓氏*</div>
+            <div class="column-4 c2"><input type="text" name=""></div>
+            <div class="column-4 c3">國家/地區*</div>
+            <div class="column-4 c4">
+                <select name="contry">
+                <option value="taiwan">台灣</option>
+                <option value="china">中國</option>
+                <option value="japan">日本</option>
+                <option value="korea">韓國</option>
+              </select>
+            </div>
+        </div>
+        <div class="row r3">
+            <div class="column-4 c1">名字*</div>
+            <div class="column-4 c2"><input type="text" name=""></div>
+            <div class="column-4 c3">您的訊息主題*</div>
+            <div class="column-4 c4">
+                <select name="msg" id="msg">
+                <option value="msg1">客戶投訴</option>
+                <option value="msg2">其他類別</option>
+                <option value="msg3">一般查詢</option>
+                <option value="msg4">合作提議</option>
+              </select>
+            </div>
+        </div>
+        <div class="row r4">
+            <div class="column-4 c1">姓氏(英文)</div>
+            <div class="column-4 c2"><input type="text" name=""></div>
+            <div class="column-4 c3"></div>
+            <div class="column-4 c4">
+                <select name="submsg1" id="submsg1">
+                <option value="msg1-1">服務</option>
+                <option value="msg1-2">活動</option>
+                <option value="msg1-3">網站</option>
+                <option value="msg1-4">專案</option>
+              </select>
+              <select name="submsg2" id="submsg2" style="display: none">
+                <option value="msg2-1">更改聯絡資料</option>
+                <option value="msg2-2">讚揚</option>
+                
+              </select>
+            </div>
+        </div>
+        <div class="row r5">
+            <div class="column-4 c1">名字(英文)</div>
+            <div class="column-4 c2"><input type="text" name=""></div>
+            <div class="column-4 c3"></div>
+            <div class="column-4 c4"></div>
+        </div>
+
+    </div>
+
+
+
+
+<!-- ================================================= -->
+
+
+
+    <div class="boxMemo">
+        <p>您的訊息</p>
+	    <textarea name="memo" rows="3" cols="30"></textarea>
+	    <p class="limit">(內容字數上限為1000字)</p>
+	</div> 
+    <!-- <div class="row"> -->
+        <input type="submit" name="" value="發送您的電郵">
+    <!-- </div>    -->
+   </form>
+ </div>
+</body>
+</html>

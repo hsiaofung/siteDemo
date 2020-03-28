@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2017-05-19 21:19:19
+ * @version $Id$
+ */
+/*=========  標語 ====================================*/
+/*=== index.html 用 ====*/
+	#slogan{
+		color: white;
+		/*font-size: 72px;		*/
+		font-size: 4em;		
+		text-align: center;			
+		position: absolute;		
+		margin: auto;
+		left: 0;
+		right: 0;
+		bottom:50px;
+		line-height: 1.8em
+		
+	}
+	@media screen and (max-width:767px){
+		#slogan{
+		    font-size: 2em;		
+		}
+
+	}

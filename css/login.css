@@ -1,0 +1,178 @@
+input{
+        font-family: "Microsoft JhengHei", "Arial", sans-serif;   
+    }
+.panel{
+        width: 600px;     
+        background: #EBEAE5;        
+        font-size: 18px;
+        border:3px solid white;
+        box-shadow:1px solid #ccc;
+        padding:20px;
+        box-sizing:border-box;
+        line-height:1.5em;
+    }
+@media screen and (max-width:767px){
+    .panel{
+        width: 100%;
+        }   
+
+}    
+    .panel:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .item{
+    	width: 50%;
+        box-sizing: border-box;
+        float: left;
+
+    }    
+@media screen and (max-width:767px){
+    .item{
+        width: 100%;
+    }
+}    
+/* ============== 光箱 ================*/
+
+.lightbox{
+    width:100vw;
+    height:100vh;
+    background:rgba(0,0,0,.5);
+    position:fixed;
+    top:0;
+    left:0;
+    display:none;
+    z-index:555;
+}
+.lightbox .content{
+	width:600px;
+	height:300px;
+	background:white;
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	margin:auto;
+}
+@media screen and (max-width:767px){
+    .lightbox .content{
+        width:90%;
+    }
+}
+
+#btnLoginCancel{
+	display:block;
+	text-decoration:none;
+	position:absolute;
+	top:-15px;
+	right:-15px;
+	color:white;
+	background:black;
+	width:30px;
+	height:30px;
+	text-align:center;
+	line-height:30px;
+	border:3px solid white;
+	border-radius:30px;
+	font-weight:bold;
+}
+.logoutPanel{
+	position:absolute;
+	right:-606px;
+	top:100px;
+	display:block;	
+    padding:0px;
+}
+@media screen and (max-width:767px){
+    .logoutPanel{
+        z-index:557;
+
+}
+
+
+input[type='email'],input[type='password']{
+    height:40px;
+    width:250px;
+    font-size:20px;
+}
+input[type='button']{
+    height:40px;
+    width:75px;
+    margin-top:2em;
+    background:#533F34;
+    color:white;
+    font-size:16px;
+    border:1px solid white;    
+}
+input[type='button']:hover{
+    opacity:0.3;
+    transition:all 400ms linear;
+}
+.lostPsw{
+    color:#A9A9A9;
+}
+.lostPsw:hover{
+    color:#444;
+    transition:all 100ms linear;   
+}
+#btnBuildAccount{
+    display:block;
+    margin-top:89px;
+    margin-left:20px;
+    width:100px;
+}
+
+
+#newAccount{
+    padding-left:20px;
+}
+@media screen and (max-width:767px){
+    #newAccount{
+    padding-left:0;
+    margin-top:10px;
+    } 
+}
+
+.textNewUser{
+    margin-top:93px;
+    border-left:1px solid #444;
+    padding-left:20px;
+}
+#register p{
+    margin-top:1em;
+    margin-bottom:1em;
+}
+.welcom{
+    margin-top:0px;
+    background:#372D2A;
+    color:white;
+    text-align:center;    
+    line-height:7em;
+}
+#btnLogout{
+    background:rgba(0,0,0,0);
+    border:1px solid white;
+    margin-bottom:2em;
+}
+.userData{
+    text-align:center;
+}
+.userData ul li{
+    border-bottom:1px solid #A9A9A9;    
+}
+.userData ul li a{
+    display:block;
+    width:100%;
+    height:100%;
+    text-decoration:none;    
+    color:#444;
+    line-height:3em;
+    padding:0.8em;
+}
+.userData ul li a:hover{
+    color:#fff;
+    background:#372D2A;
+    transition:all 100ms ease-in-out;   
+    }
