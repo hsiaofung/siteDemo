@@ -15,7 +15,9 @@ body {
 	width: 100vw;
 	height: 100vh;
 }
-
+a{
+	color: white;
+}
 .card {
 	width: 500px;
 	/*height: 708px;		*/
@@ -123,6 +125,9 @@ body {
 }
 
 .page {
+	position: absolute;
+	left: 0;
+	right: 0;
 	/* width: 50%;
 		height: 100%;
 		position: relative;			 */
