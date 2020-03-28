@@ -27,8 +27,8 @@ a:hover {
 }
 
 .card {
-	width: 500px;
-	height: 700px;
+	width: 396px;
+	height: 551px;
 	position: absolute;
 	top: 75px;
 	left: 0;
@@ -40,13 +40,7 @@ a:hover {
 	cursor: pointer;
 }
 
-@media screen and (max-width:767px) {
-	.card {
-		top: 900px;
-		left: 0px;
-		width: 100%;
-	}
-}
+
 
 .card1 {
 	transform: scale(1);
@@ -89,7 +83,7 @@ a:hover {
 
 .text {
 	color: white;
-	font-size: 25px;
+	font-size: 18px;
 	display: none;
 }
 
@@ -97,49 +91,17 @@ a:hover {
 	display: block;
 }
 
-@media screen and (max-width:767px) {
-	.rightSide {
-		position: absolute;
-		top: 69px;
-		margin-top: 20px;
-
-
-	}
-
-	.text {
-		color: white;
-		background: black;
-		width: 100vw;
-	}
-}
-
-@media screen and (min-width:768px) {
-
-	.rightSide,
-	.page {
-		display: inline-block;
-		vertical-align: middle;
-		line-height: 4em;
-	}
-}
-
 .rightSide {
 	width: 40%;
 	text-align: center;
 	position: absolute;
-	bottom: 145px;
+	bottom: 8px;
 	left: 30%;
+	line-height: 2em;
 }
 
 .page {
-	position: absolute;
+	position: relative;
 	left: 0;
 	right: 0;
-}
-
-@media screen and (max-width:767px) {
-	.page {
-		width: 100%;
-	}
-
 }
