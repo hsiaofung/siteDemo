@@ -25,113 +25,11 @@
 	<script src="js/stack.js"></script>
 	<script src="js/login.js"></script>
 	<script src="js/logo_hover.js"></script>
-	<script>
-		$(document).ready(function () {
-			$('#proposal').click(function () {
-				var user = $('#memName').text();
-
-				if (user === '') {
-					alert("We see you're not logged in. Do you want to Sign up?");
-					$('#topMessage').slideDown(2000);
-				}
-
-			});
-			$('#hideMessage').click(function () {
-				$('#topMessage').slideUp(1000);
-			});
-		});
-	</script>
-	<style type="text/css">
-		.box1 {
-			background: rgba(0, 0, 0, 0.2);
-		}
-
-		.stack {
-			/*height: 80%;*/
-		}
-
-		#topMessage {
-			z-index: 1000;
-			position: absolute;
-			right: 0px;
-			left: 0px;
-			margin: auto;
-		}
-	</style>
 </head>
 
 <body>
-	<div id="topMessage">
-		We see you're not logged in. Do you want to <a href="#">sign up</a>? <br>
-		<a href="#" id="hideMessage">No, thanks.</a>
-	</div>
-	<!-- ====================== RWD 導覽列  ==================-->
-	<input type="checkbox" name="" id="control-box">
-	<!-- =====================================================-->
-	<!-- =========== 架導覽列和logo ========================== -->
-	<!-- <div class="box1 header">
-		<div class="logo">
-			<a href="index.html">
-				<img src="images/logo_v3.png">
-			</a>
-		</div>
-		<label class="hb" for="control-box"></label>
-
-		<nav>
-			<ul id="main_menu">
-				<li><a href="stack.html">我的作品</a></li>
-				<li><a href="form.html" id="proposal">立即提案</a></li>
-
-			</ul>
-			<ul id="sub_menu">
-				<li><a class="account login" href="#" title="我的帳號">我的帳號</a></li>
-				<li><a id="service" href="form.html" title="客戶服務">客戶服務</a></li>
-			</ul>
-		</nav>
-	</div> -->
-	<!--======================================================================  -->
-	<!--================== 登入畫面==============================  -->
-	<div class="lightbox">
-		<div class="content">
-			<a id="btnLoginCancel" href="">X</a>
-			<div class="panel panelLogin">
-				<div id="register" class='item'>
-					<h2>登入</h2>
-					<p>如果您已是用戶，請在此登入。</p>
-					<label>電郵地址*</label><br>
-					<input type="email" name="" id="memId"><br>
-					<label>密碼*</label><br>
-					<input type="password" name="" id="memPsw"><br>
-					<a class="lostPsw" href="">忘記密碼?</a><br>
-					<input type="button" name="" value="登入" id="btnLogin">
-				</div>
-				<div id="newAccount" class='item'>
-					<h2>新用戶</h2>
-					<p class='textNewUser'>如欲透過電子郵件收取您的密碼，<br>請在此輸入您的電郵地址。</p>
-					<input id="btnBuildAccount" type="button" name="" value="建立帳號">
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--================== 登出畫面==============================  -->
-	<div class='panel logoutPanel'>
-		<div class='item welcom'>
-			<h2>歡迎<span id='memName'></span></h2>
-			<input type="button" name="" value="登出" id="btnLogout">
-		</div>
-		<div class='item userData'>
-			<ul>
-				<li><a href="#">我的個人檔案</a></li>
-				<li><a href="#">我發佈的專案</a></li>
-				<li><a href="#">我參加的專案</a></li>
-			</ul>
-		</div>
-
-
-	</div>
 	<div class="stack">
 		<div class="page">
-			<!-- <div class="card card7" name="img7"><img src="images/pro7.jpg"></div> -->
 			<div class="card card6" name="img6"><img src="images/pro6.jpg"></div>
 			<div class="card card5" name="img5"><img src="images/pro5.jpg"></div>
 			<div class="card card4" name="img4"><img src="images/pro4.jpg"></div>
@@ -165,12 +63,7 @@
 				<h2>matches禮品網站</h2>
 				<a href="https://hsiaofung.github.io/matches" target="_blank">https://hsiaofung.github.io/matches</a>
 			</div>
-			<!-- <div class="text text7">
-				<h2>7</h2>
-				<p>7</p>
-			</div> -->
 		</div>
-
 	</div>
 </body>
 
